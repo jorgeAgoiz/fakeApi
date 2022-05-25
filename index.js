@@ -1,8 +1,11 @@
 const { faker } = require("@faker-js/faker")
 const express = require("express")
+const cors = require("cors")
 
 const app = express()
 const PORT = 3006
+
+app.use(cors())
 
 // GET -> /reviews
 app.get('/reviews', (req, res) => {
